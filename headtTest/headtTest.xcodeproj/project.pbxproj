@@ -15,6 +15,17 @@
 		BDE8C72A20F47AF0009528AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE8C72820F47AF0009528AD /* LaunchScreen.storyboard */; };
 		BDE8C73520F47AF0009528AD /* headtTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8C73420F47AF0009528AD /* headtTestTests.swift */; };
 		BDE8C74020F47AF0009528AD /* headtTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8C73F20F47AF0009528AD /* headtTestUITests.swift */; };
+		BDEF02F620F926CA008EFF11 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF02F020F926CA008EFF11 /* Category+CoreDataClass.swift */; };
+		BDEF02F720F926CA008EFF11 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF02F120F926CA008EFF11 /* Category+CoreDataProperties.swift */; };
+		BDEF02F820F926CA008EFF11 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF02F220F926CA008EFF11 /* Product+CoreDataClass.swift */; };
+		BDEF02F920F926CA008EFF11 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF02F320F926CA008EFF11 /* Product+CoreDataProperties.swift */; };
+		BDEF02FA20F926CA008EFF11 /* Varient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF02F420F926CA008EFF11 /* Varient+CoreDataClass.swift */; };
+		BDEF02FB20F926CA008EFF11 /* Varient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF02F520F926CA008EFF11 /* Varient+CoreDataProperties.swift */; };
+		BDEF02FF20F946B4008EFF11 /* CustomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF02FD20F946B4008EFF11 /* CustomeTableViewCell.swift */; };
+		BDEF030020F946B4008EFF11 /* CustomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDEF02FE20F946B4008EFF11 /* CustomeTableViewCell.xib */; };
+		BDEF030220F9CDEF008EFF11 /* VarientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF030120F9CDEF008EFF11 /* VarientViewController.swift */; };
+		BDEF030520F9DA15008EFF11 /* varientCustamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF030320F9DA15008EFF11 /* varientCustamCell.swift */; };
+		BDEF030620F9DA15008EFF11 /* varientCustamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDEF030420F9DA15008EFF11 /* varientCustamCell.xib */; };
 		BDFD795D20F48B8D00B5988B /* ServiceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD795C20F48B8D00B5988B /* ServiceClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +61,18 @@
 		BDE8C73B20F47AF0009528AD /* headtTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = headtTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE8C73F20F47AF0009528AD /* headtTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headtTestUITests.swift; sourceTree = "<group>"; };
 		BDE8C74120F47AF0009528AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDEF02EF20F9267B008EFF11 /* 1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 1.xcdatamodel; sourceTree = "<group>"; };
+		BDEF02F020F926CA008EFF11 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDEF02F120F926CA008EFF11 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDEF02F220F926CA008EFF11 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDEF02F320F926CA008EFF11 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDEF02F420F926CA008EFF11 /* Varient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Varient+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDEF02F520F926CA008EFF11 /* Varient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Varient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDEF02FD20F946B4008EFF11 /* CustomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTableViewCell.swift; sourceTree = "<group>"; };
+		BDEF02FE20F946B4008EFF11 /* CustomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomeTableViewCell.xib; sourceTree = "<group>"; };
+		BDEF030120F9CDEF008EFF11 /* VarientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarientViewController.swift; sourceTree = "<group>"; };
+		BDEF030320F9DA15008EFF11 /* varientCustamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = varientCustamCell.swift; sourceTree = "<group>"; };
+		BDEF030420F9DA15008EFF11 /* varientCustamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = varientCustamCell.xib; sourceTree = "<group>"; };
 		BDFD795C20F48B8D00B5988B /* ServiceClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,9 +124,12 @@
 		BDE8C71B20F47AF0009528AD /* headtTest */ = {
 			isa = PBXGroup;
 			children = (
+				BDEF02FC20F9468C008EFF11 /* CustomeCell */,
+				BDEF02EE20F92658008EFF11 /* DataModel */,
 				BDFD795B20F48B5D00B5988B /* ServiceClass */,
 				BDE8C71C20F47AF0009528AD /* AppDelegate.swift */,
 				BDE8C71E20F47AF0009528AD /* ViewController.swift */,
+				BDEF030120F9CDEF008EFF11 /* VarientViewController.swift */,
 				BDE8C72020F47AF0009528AD /* Main.storyboard */,
 				BDE8C72620F47AF0009528AD /* Assets.xcassets */,
 				BDE8C72820F47AF0009528AD /* LaunchScreen.storyboard */,
@@ -129,6 +155,30 @@
 				BDE8C74120F47AF0009528AD /* Info.plist */,
 			);
 			path = headtTestUITests;
+			sourceTree = "<group>";
+		};
+		BDEF02EE20F92658008EFF11 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDEF02F020F926CA008EFF11 /* Category+CoreDataClass.swift */,
+				BDEF02F120F926CA008EFF11 /* Category+CoreDataProperties.swift */,
+				BDEF02F220F926CA008EFF11 /* Product+CoreDataClass.swift */,
+				BDEF02F320F926CA008EFF11 /* Product+CoreDataProperties.swift */,
+				BDEF02F420F926CA008EFF11 /* Varient+CoreDataClass.swift */,
+				BDEF02F520F926CA008EFF11 /* Varient+CoreDataProperties.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		BDEF02FC20F9468C008EFF11 /* CustomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDEF02FD20F946B4008EFF11 /* CustomeTableViewCell.swift */,
+				BDEF02FE20F946B4008EFF11 /* CustomeTableViewCell.xib */,
+				BDEF030320F9DA15008EFF11 /* varientCustamCell.swift */,
+				BDEF030420F9DA15008EFF11 /* varientCustamCell.xib */,
+			);
+			path = CustomeCell;
 			sourceTree = "<group>";
 		};
 		BDFD795B20F48B5D00B5988B /* ServiceClass */ = {
@@ -246,8 +296,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEF030020F946B4008EFF11 /* CustomeTableViewCell.xib in Resources */,
 				BDE8C72A20F47AF0009528AD /* LaunchScreen.storyboard in Resources */,
 				BDE8C72720F47AF0009528AD /* Assets.xcassets in Resources */,
+				BDEF030620F9DA15008EFF11 /* varientCustamCell.xib in Resources */,
 				BDE8C72220F47AF0009528AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,9 +326,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDFD795D20F48B8D00B5988B /* ServiceClass.swift in Sources */,
+				BDEF030520F9DA15008EFF11 /* varientCustamCell.swift in Sources */,
+				BDEF02F720F926CA008EFF11 /* Category+CoreDataProperties.swift in Sources */,
+				BDEF030220F9CDEF008EFF11 /* VarientViewController.swift in Sources */,
 				BDE8C71F20F47AF0009528AD /* ViewController.swift in Sources */,
+				BDEF02F820F926CA008EFF11 /* Product+CoreDataClass.swift in Sources */,
+				BDEF02FA20F926CA008EFF11 /* Varient+CoreDataClass.swift in Sources */,
 				BDE8C71D20F47AF0009528AD /* AppDelegate.swift in Sources */,
+				BDEF02FB20F926CA008EFF11 /* Varient+CoreDataProperties.swift in Sources */,
+				BDEF02F620F926CA008EFF11 /* Category+CoreDataClass.swift in Sources */,
+				BDEF02F920F926CA008EFF11 /* Product+CoreDataProperties.swift in Sources */,
 				BDE8C72520F47AF0009528AD /* headtTest.xcdatamodeld in Sources */,
+				BDEF02FF20F946B4008EFF11 /* CustomeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +640,7 @@
 		BDE8C72320F47AF0009528AD /* headtTest.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				BDEF02EF20F9267B008EFF11 /* 1.xcdatamodel */,
 				BDE8C72420F47AF0009528AD /* headtTest.xcdatamodel */,
 			);
 			currentVersion = BDE8C72420F47AF0009528AD /* headtTest.xcdatamodel */;

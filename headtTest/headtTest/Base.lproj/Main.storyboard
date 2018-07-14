@@ -13,9 +13,10 @@
         <!--Navigation Controller-->
         <scene sceneID="JJ0-RG-Yb9">
             <objects>
-                <navigationController navigationBarHidden="YES" id="6rV-0L-HbG" sceneMemberID="viewController">
-                    <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ic5-VP-ZCd">
+                <navigationController id="6rV-0L-HbG" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="ic5-VP-ZCd">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -33,14 +34,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UUO-eg-3dP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mqP-Fl-G9p"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="y9Z-OY-PQ9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UUO-eg-3dP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1o0-6b-DF5"/>
+                            <constraint firstItem="UUO-eg-3dP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pvu-Vx-FZi"/>
+                            <constraint firstItem="UUO-eg-3dP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UpX-bL-1Iz"/>
+                            <constraint firstItem="UUO-eg-3dP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="d4I-Ta-duF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="9Zf-mn-anz"/>
+                    <connections>
+                        <outlet property="listView" destination="UUO-eg-3dP" id="zrQ-iS-5mJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12" y="90"/>
+            <point key="canvasLocation" x="12" y="89.505247376311857"/>
+        </scene>
+        <!--Varient View Controller-->
+        <scene sceneID="QCZ-3f-OLs">
+            <objects>
+                <viewController storyboardIdentifier="varientView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ht4-oW-98v" customClass="VarientViewController" customModule="headtTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4bh-hf-2uw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="waH-Cx-17b">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ht4-oW-98v" id="8pR-bO-L51"/>
+                                    <outlet property="delegate" destination="Ht4-oW-98v" id="mcz-AH-KTc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="waH-Cx-17b" firstAttribute="bottom" secondItem="awl-dz-pYL" secondAttribute="bottom" id="7Tj-eQ-96s"/>
+                            <constraint firstItem="waH-Cx-17b" firstAttribute="trailing" secondItem="awl-dz-pYL" secondAttribute="trailing" id="9q0-5H-VLN"/>
+                            <constraint firstItem="waH-Cx-17b" firstAttribute="leading" secondItem="awl-dz-pYL" secondAttribute="leading" id="OGT-Cp-hKE"/>
+                            <constraint firstItem="waH-Cx-17b" firstAttribute="top" secondItem="awl-dz-pYL" secondAttribute="top" id="mEW-kC-9U8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="awl-dz-pYL"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="varientList" destination="waH-Cx-17b" id="2he-97-xUX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Et4-QR-fOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637.60000000000002" y="89.505247376311857"/>
         </scene>
     </scenes>
 </document>

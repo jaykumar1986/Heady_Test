@@ -17,7 +17,7 @@ class ServiceClass: NSObject {
                 if let result = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary{
                     let catResult = result["categories"] as! NSArray
                     let rankResult = result["rankings"] as! NSArray
-                    print(catResult,rankResult)
+                    //print(catResult,rankResult)
                     completion(catResult,rankResult)
                 }
                 
