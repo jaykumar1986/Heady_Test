@@ -26,6 +26,13 @@
 		BDEF030220F9CDEF008EFF11 /* VarientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF030120F9CDEF008EFF11 /* VarientViewController.swift */; };
 		BDEF030520F9DA15008EFF11 /* varientCustamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF030320F9DA15008EFF11 /* varientCustamCell.swift */; };
 		BDEF030620F9DA15008EFF11 /* varientCustamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDEF030420F9DA15008EFF11 /* varientCustamCell.xib */; };
+		BDF16FF320FB99590074EE6B /* Ranking+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF16FEF20FB99590074EE6B /* Ranking+CoreDataClass.swift */; };
+		BDF16FF420FB99590074EE6B /* Ranking+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF16FF020FB99590074EE6B /* Ranking+CoreDataProperties.swift */; };
+		BDF16FF520FB99590074EE6B /* RankingProd+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF16FF120FB99590074EE6B /* RankingProd+CoreDataClass.swift */; };
+		BDF16FF620FB99590074EE6B /* RankingProd+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF16FF220FB99590074EE6B /* RankingProd+CoreDataProperties.swift */; };
+		BDF16FFA20FB9DCF0074EE6B /* popOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF16FF920FB9DCF0074EE6B /* popOverViewController.swift */; };
+		BDF16FFD20FBA3120074EE6B /* ratingCustomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF16FFB20FBA3120074EE6B /* ratingCustomeCell.swift */; };
+		BDF16FFE20FBA3120074EE6B /* ratingCustomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF16FFC20FBA3120074EE6B /* ratingCustomeCell.xib */; };
 		BDFD795D20F48B8D00B5988B /* ServiceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFD795C20F48B8D00B5988B /* ServiceClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +80,13 @@
 		BDEF030120F9CDEF008EFF11 /* VarientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarientViewController.swift; sourceTree = "<group>"; };
 		BDEF030320F9DA15008EFF11 /* varientCustamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = varientCustamCell.swift; sourceTree = "<group>"; };
 		BDEF030420F9DA15008EFF11 /* varientCustamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = varientCustamCell.xib; sourceTree = "<group>"; };
+		BDF16FEF20FB99590074EE6B /* Ranking+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ranking+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDF16FF020FB99590074EE6B /* Ranking+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ranking+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDF16FF120FB99590074EE6B /* RankingProd+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankingProd+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDF16FF220FB99590074EE6B /* RankingProd+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RankingProd+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDF16FF920FB9DCF0074EE6B /* popOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popOverViewController.swift; sourceTree = "<group>"; };
+		BDF16FFB20FBA3120074EE6B /* ratingCustomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ratingCustomeCell.swift; sourceTree = "<group>"; };
+		BDF16FFC20FBA3120074EE6B /* ratingCustomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ratingCustomeCell.xib; sourceTree = "<group>"; };
 		BDFD795C20F48B8D00B5988B /* ServiceClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +144,7 @@
 				BDE8C71C20F47AF0009528AD /* AppDelegate.swift */,
 				BDE8C71E20F47AF0009528AD /* ViewController.swift */,
 				BDEF030120F9CDEF008EFF11 /* VarientViewController.swift */,
+				BDF16FF920FB9DCF0074EE6B /* popOverViewController.swift */,
 				BDE8C72020F47AF0009528AD /* Main.storyboard */,
 				BDE8C72620F47AF0009528AD /* Assets.xcassets */,
 				BDE8C72820F47AF0009528AD /* LaunchScreen.storyboard */,
@@ -160,6 +175,10 @@
 		BDEF02EE20F92658008EFF11 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				BDF16FEF20FB99590074EE6B /* Ranking+CoreDataClass.swift */,
+				BDF16FF020FB99590074EE6B /* Ranking+CoreDataProperties.swift */,
+				BDF16FF120FB99590074EE6B /* RankingProd+CoreDataClass.swift */,
+				BDF16FF220FB99590074EE6B /* RankingProd+CoreDataProperties.swift */,
 				BDEF02F020F926CA008EFF11 /* Category+CoreDataClass.swift */,
 				BDEF02F120F926CA008EFF11 /* Category+CoreDataProperties.swift */,
 				BDEF02F220F926CA008EFF11 /* Product+CoreDataClass.swift */,
@@ -177,6 +196,8 @@
 				BDEF02FE20F946B4008EFF11 /* CustomeTableViewCell.xib */,
 				BDEF030320F9DA15008EFF11 /* varientCustamCell.swift */,
 				BDEF030420F9DA15008EFF11 /* varientCustamCell.xib */,
+				BDF16FFB20FBA3120074EE6B /* ratingCustomeCell.swift */,
+				BDF16FFC20FBA3120074EE6B /* ratingCustomeCell.xib */,
 			);
 			path = CustomeCell;
 			sourceTree = "<group>";
@@ -299,6 +320,7 @@
 				BDEF030020F946B4008EFF11 /* CustomeTableViewCell.xib in Resources */,
 				BDE8C72A20F47AF0009528AD /* LaunchScreen.storyboard in Resources */,
 				BDE8C72720F47AF0009528AD /* Assets.xcassets in Resources */,
+				BDF16FFE20FBA3120074EE6B /* ratingCustomeCell.xib in Resources */,
 				BDEF030620F9DA15008EFF11 /* varientCustamCell.xib in Resources */,
 				BDE8C72220F47AF0009528AD /* Main.storyboard in Resources */,
 			);
@@ -329,14 +351,20 @@
 				BDEF030520F9DA15008EFF11 /* varientCustamCell.swift in Sources */,
 				BDEF02F720F926CA008EFF11 /* Category+CoreDataProperties.swift in Sources */,
 				BDEF030220F9CDEF008EFF11 /* VarientViewController.swift in Sources */,
+				BDF16FFD20FBA3120074EE6B /* ratingCustomeCell.swift in Sources */,
 				BDE8C71F20F47AF0009528AD /* ViewController.swift in Sources */,
 				BDEF02F820F926CA008EFF11 /* Product+CoreDataClass.swift in Sources */,
 				BDEF02FA20F926CA008EFF11 /* Varient+CoreDataClass.swift in Sources */,
 				BDE8C71D20F47AF0009528AD /* AppDelegate.swift in Sources */,
+				BDF16FF320FB99590074EE6B /* Ranking+CoreDataClass.swift in Sources */,
 				BDEF02FB20F926CA008EFF11 /* Varient+CoreDataProperties.swift in Sources */,
 				BDEF02F620F926CA008EFF11 /* Category+CoreDataClass.swift in Sources */,
 				BDEF02F920F926CA008EFF11 /* Product+CoreDataProperties.swift in Sources */,
 				BDE8C72520F47AF0009528AD /* headtTest.xcdatamodeld in Sources */,
+				BDF16FF620FB99590074EE6B /* RankingProd+CoreDataProperties.swift in Sources */,
+				BDF16FF520FB99590074EE6B /* RankingProd+CoreDataClass.swift in Sources */,
+				BDF16FF420FB99590074EE6B /* Ranking+CoreDataProperties.swift in Sources */,
+				BDF16FFA20FB9DCF0074EE6B /* popOverViewController.swift in Sources */,
 				BDEF02FF20F946B4008EFF11 /* CustomeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,12 +9,14 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,UIPopoverPresentationControllerDelegate, selectRationg{
 
+    @IBOutlet weak var popUpBtn: UIBarButtonItem!
     lazy var catListArray : [Category] = []
     let customeCell = "CustomeCell"
     @IBOutlet weak var listView: UITableView!
     let appDelegate =  UIApplication.shared.delegate as! AppDelegate
+    lazy var rankingList : [RankingProd] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         listView.register(UINib(nibName :"CustomeTableViewCell" , bundle : nil), forCellReuseIdentifier: customeCell)
@@ -25,11 +27,43 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         ServiceClass.getShoping({(catList,rankList)in
             DispatchQueue.main.async {
                 self.addCatItemToDB(catItem: catList)
+                self.addrankingToDB(rank: rankList)
                 self.listView.reloadData()
             }
             print("cat list : \(catList),\n RankList: \(rankList)")
         })
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    private func addrankingToDB(rank : AnyObject){
+        guard let items = rank as? [AnyObject] else {
+            return
+        }
+        clearRatingDB()
+        for item in items{
+            let context = appDelegate.persistentContainer.viewContext
+            let rank = Ranking(context : context)
+            rank.ranking = (item["ranking"] as? String)!
+            for prod in item["products"] as! [AnyObject]{
+                let rankingprod = RankingProd(context : context)
+                rankingprod.id = (prod["id"] as? Int32)!
+                if let view_count = (prod["view_count"] as? Int32){
+                    rankingprod.view_count = view_count
+                }
+                else if let view_count = (prod["order_count"] as? Int32){
+                    rankingprod.view_count = view_count
+                }
+                else if let shared = (prod["shares"] as? Int32){
+                    rankingprod.view_count = shared
+                }
+                rank.addToRankingprod(rankingprod)
+            }
+            do{
+                try context.save()
+            }catch let error as NSError{
+                print("Could Not save.\(error),\(error.userInfo)")
+            }
+        }
     }
     private func addCatItemToDB(catItem : AnyObject){
         print("item : \(catItem)");
@@ -67,8 +101,18 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                 print("Could Not save.\(error),\(error.userInfo)")
             }
         }
+    }
+    private func clearRatingDB(){
         
+        let rankingProd : NSFetchRequest<RankingProd> = RankingProd.fetchRequest()
+        let delAllratingReqVar = NSBatchDeleteRequest(fetchRequest: rankingProd as! NSFetchRequest<NSFetchRequestResult>)
+        do { try appDelegate.persistentContainer.viewContext.execute(delAllratingReqVar) }
+        catch { print(error) }
         
+        let ranking : NSFetchRequest<Ranking> = Ranking.fetchRequest()
+        let delAllrankVar = NSBatchDeleteRequest(fetchRequest: ranking as! NSFetchRequest<NSFetchRequestResult>)
+        do { try appDelegate.persistentContainer.viewContext.execute(delAllrankVar) }
+        catch { print(error) }
     }
     private func cleanDB(){
         
@@ -112,6 +156,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         let prodlist = getProdList(catList: catListArray[indexPath.section])
         let prod = prodlist[indexPath.row]
         gotoDetailView(product: prod)
+        
+        
     }
     
     
@@ -150,6 +196,67 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             
         }
         return prodVal;
+    }
+    
+    // Mark: - UIPopoverPresentationControllerDelegate
+    
+    func prepareForPopoverPresentation(_ popoverPresentationController: UIPopoverPresentationController) {
+        popoverPresentationController.permittedArrowDirections = .any
+        popoverPresentationController.barButtonItem = popUpBtn
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let popView = storyboard.instantiateViewController(withIdentifier: "popOver") as! popOverViewController
+        popView.delegate = self
+        // Set your popover size.
+        popView.preferredContentSize = CGSize(width: 200, height: 150)
+        // Set the presentation style to modal so that the above methods get called.
+        popView.modalPresentationStyle = .popover
+        
+        // Set the popover presentation controller delegate so that the above methods get called.
+        popView.popoverPresentationController!.delegate = self
+        
+        // Present the popover.
+        self.present(popView, animated: true, completion: nil)
+    }
+    
+    func sort(a: [Category], basedOn b: [RankingProd]) -> [Category] {
+        let keysArray = b.map { (dictionary) -> Int in
+            return (dictionary.value(forKey: "Id") as? Int)!
+        }
+        return a.sorted { x, y in
+            keysArray.index(of: Int(x.id))! > keysArray.index(of: Int(y.id))!
+        }
+    }
+    
+    func ratingName(name : Ranking){
+        if(rankingList.count > 0){
+            rankingList.removeAll()
+        }
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let rankingPred = NSPredicate(format: "ranking == %@", name)
+        let rank : NSFetchRequest<RankingProd> = RankingProd.fetchRequest()
+        rank.predicate = rankingPred
+        rank.returnsObjectsAsFaults = false
+        do{
+            let fetchcat = try context.fetch(rank)
+            for item in fetchcat{
+                rankingList.append(item)
+            }
+            rankingList =  rankingList.sorted { $0.view_count < $1.view_count}
+            catListArray = sort(a: catListArray, basedOn: rankingList)
+            listView.reloadData()
+            
+        }catch {
+            fatalError("Failed to fetch person: \(error)")
+            
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

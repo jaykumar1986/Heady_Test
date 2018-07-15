@@ -12,6 +12,15 @@
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="product" inverseEntity="Category" syncable="YES"/>
         <relationship name="varient" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Varient" inverseName="product" inverseEntity="Varient" syncable="YES"/>
     </entity>
+    <entity name="Ranking" representedClassName=".Ranking" syncable="YES">
+        <attribute name="ranking" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rankingprod" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RankingProd" inverseName="ranking" inverseEntity="RankingProd" syncable="YES"/>
+    </entity>
+    <entity name="RankingProd" representedClassName=".RankingProd" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="view_count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="ranking" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Ranking" inverseName="rankingprod" inverseEntity="Ranking" syncable="YES"/>
+    </entity>
     <entity name="Varient" representedClassName="Varient" syncable="YES">
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -23,5 +32,7 @@
         <element name="Category" positionX="-261" positionY="15" width="128" height="88"/>
         <element name="Product" positionX="-54" positionY="9" width="128" height="118"/>
         <element name="Varient" positionX="108" positionY="27" width="128" height="118"/>
+        <element name="Ranking" positionX="-324" positionY="212" width="128" height="73"/>
+        <element name="RankingProd" positionX="-81" positionY="209" width="128" height="88"/>
     </elements>
 </model>
